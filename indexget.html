@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>1️⃣ document.getElementById(id)</h1>
+        <!-- El metodo que selecciona un unico elemento por su atributo id -->
+        <p id="mensaje">Texto original</p>
+        <script>
+          const parrafo = document.getElementById("mensaje");
+          parrafo.innerText = "Texto modificado desde JS con getElementById";
+        </script>
+        <hr />
+        <!-- Cambiar estilo -->
+        <h1 id="titulo">Hola Mundo</h1>
+
+        <script>
+          const titulo = document.getElementById("titulo");
+          titulo.style.color = "blue";
+          titulo.style.fontSize = "30px";
+          titulo.style.textAlign = "center";
+          titulo.style.backgroundColor = "pink";
+        </script>
+        <hr />
+        <!-- Leer el valor de un input -->
+        <input id="nombre" type="text" value="Silvia" />
+        <script>
+          const input = document.getElementById("nombre");
+          console.log("Valor del input:", input.value);
+        </script>
+        <hr />
+      </section>
+
+      <section>
+        <h1>2️⃣ document.querySelector</h1>
+        <!-- Seleccionar por clase -->
+        <p class="texto">Primer parrafo</p>
+        <p class="texto">Segundo parrafo</p>
+        <p class="texto">Tercer parrafo</p>
+        <script>
+          const elemento = document.querySelector(".texto");
+          elemento.style.backgroundColor = "brown ";
+          elemento.style.color = "white";
+          elemento.style.padding = "50px";
+          elemento.style.textAlign = "right";
+        </script>
+        <hr />
+
+        <div id="contenedor">Contenido original</div>
+        <script>
+          const contenedor = document.querySelector("#contenedor");
+          contenedor.innerHTML =
+            "<b>Contenido modificado con querySelector ✅</b>";
+        </script>
+
+        <h1>Soy un Titulo</h1>
+        <script>
+          const h1 = document.querySelector("h1");
+          h1.style.fontFamily = "Arial, sans-serif";
+          h1.style.textTransform = "uppercase";
+          h1.style.letterSpacing = "5px";
+          h1.style.textAlign = "center";
+          h1.style.color = "blueviolet";
+        </script>
+        <hr />
+
+        <p class="resaltado">Parrafo 20</p>
+        <div class="resaltado">Div1</div>
+        <!--posicion 0 -->
+        <div class="resaltado">Div2</div>
+        <!-- posicion 1 -->
+        <div class="resaltado">Div3</div>
+        <!-- posicion 2 -->
+
+        <script>
+          // Selecciona todos los elementos con la clase .resaltado
+          const resaltados = document.querySelectorAll(".resaltado");
+          // Queremos el tercer .resaltado (Div3). Los índices empiezan en 0.
+          // Si no existe el tercero, como fallback usamos el último.
+          const div3 = resaltados[3] || resaltados[resaltados.length - 1];
+          if (div3) {
+            div3.style.border = "4px solid #e11d48";
+            div3.style.padding = "10px";
+            div3.style.backgroundColor = "#fff7ed";
+          } else {
+            console.warn(
+              "No se encontró el tercer elemento con la clase .resaltado"
+            );
+          }
+        </script>
+      </section>
+
+      <section>
+        <!-- Cambiar color de varios parrafos -->
+        <h1>3️⃣ document.querySelectorAll</h1>
+
+        <p class="item">Parrafo 10</p>
+        <p class="item">Parrafo 11</p>
+        <p class="item">Parrafo 12</p>
+<script>
+  const parrafos = document.querySelectorAll(".item");
+  parrafos.forEach(p => p.style.color = "red");
+  parrafos.forEach(p => p.style.fontSize = "20px");
+  parrafos.forEach(p => p.style.fontWeight = "bold");
+  parrafos.forEach(p => p.style.textAlign = "center");
+  parrafos.forEach(p => p.style.backgroundColor = "#f0f0f0");
+  parrafos.forEach(p => p.style.padding = "10px");
+  parrafos.forEach(p => p.style.borderRadius = "25px");
+  parrafos.forEach(p => p.style.margin = "10px 0");
+  parrafos.forEach(p => p.style.border = "2px solid #ccc");
+
+</script>
+<hr>
+<!-- Agregar numeracion a una lista -->
+<ul>
+  <li class="producto">Manzana</li>
+  <li class="producto">Banana</li>
+  <li class="producto">Pera</li>
+</ul>
+<script>
+  const productos = document.querySelectorAll(".producto");
+  productos.forEach
+</script>
+
+
+
+
+      </section>
+      
+      <br>
+      <br>
+      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    </main>
+  </body>
+</html>
